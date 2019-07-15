@@ -2,6 +2,9 @@
 
 ### By Juliet Wambua
 
+## Description
+This is an application that helps one to easily get their Github profile and repositories by just typing their username and submitting.
+
 # Github
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
