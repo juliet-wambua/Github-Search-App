@@ -3,7 +3,7 @@
 ### By Juliet Wambua
 
 ## Description
-This is an application that helps one to easily get their Github profile and repositories by just typing their username and submitting.
+This is an application that helps one to easily get their Github profile and repositories by just typing their username and submitting. The profile comes with the number of repos one has, their folloers and the people they are following etc. One can also go to the repository they want to view by just clicking on it.
 
 # Github
 
