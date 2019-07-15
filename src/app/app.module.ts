@@ -1,22 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RoutingModule} from './routing/routing.module';
+import { HttpClient } from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+import { GithubService } from './github-services/github.service';
+
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ServicesComponent } from './services/services.component';
+import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent,
-    ServicesComponent
+    AboutComponent,
+    NotFoundComponent,
+    ContactComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RoutingModule,
+    HttpClient,
+    FormsModule
+    
   ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
