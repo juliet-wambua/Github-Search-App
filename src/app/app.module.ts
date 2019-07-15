@@ -1,34 +1,35 @@
+import { FormsModule } from '@angular/forms';
+import { SearchService } from './services/search.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RoutingModule} from './routing/routing.module';
-import { HttpClient } from '@angular/common/http';
-import { FormsModule} from '@angular/forms';
-
-import { GithubService } from './github-services/github.service';
-
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { ContactComponent } from './contact/contact.component';
+import { HomeSearchComponent } from './components/home-search/home-search.component';
+import { SearchFormComponent } from './components/search-form/search-form.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { RepoHoverDirective } from './repo-hover.directive';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
+    HomeSearchComponent,
+    SearchFormComponent,
     NotFoundComponent,
-    ContactComponent,
-    
-    
+    LandingComponent,
+    RepoHoverDirective
   ],
   imports: [
     BrowserModule,
-    RoutingModule,
-    HttpClient,
+    AppRoutingModule,
+    HttpClientModule,
     FormsModule
-    
   ],
-  providers: [GithubService],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

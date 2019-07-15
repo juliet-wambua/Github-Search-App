@@ -1,0 +1,58 @@
+<div class="container">
+  <app-search-form (onQueryString)="onQuerySearch($event)"></app-search-form>
+
+  <div class="row">
+    <div class="col-md-5 col-sm-12 mb-3">
+
+      <div class="user-card" *ngIf="_user">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <div class="titles d-flex flex-column">
+                <h3 class="card-title">{{_user.name}}</h3>
+                <small class="text-muted">{{_user.login}}</small>
+              </div>
+              <img class="card-img-top" [src]="_user?.avatar_url" alt="">
+            </div>
+            <div class="card-body ">
+              <p class="card-text" *ngIf="_user.bio">{{_user?.bio}}</p>
+              <ul class="list-group">
+                <li class="list-group-item" *ngIf="_user.location"><i class="fa fa-map-marker"></i>{{_user.location}}
+                </li>
+                <li class="list-group-item" *ngIf="_user.company"><i class="fa fa-building-o"></i>{{_user?.company}}
+                </li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <span class="badge badge-danger"> Repos:{{_user?.public_repos}}</span>
+              <span class="badge badge-warning"> Followers:{{_user?.followers}}</span>
+              <span class="badge badge-primary"> Following:{{_user?.following}}</span>
+              <span class="badge badge-info"> Gists:{{_user?.public_gists}}</span>
+            </div>
+          </div><!-- card body -->
+        </div> <!-- card deck -->
+      </div><!-- user-card -->
+    </div><!-- col-md-4 -->
+
+
+
+
+
+    <div class="col-md-7 col-sm-12">
+      <div class="row">
+        <div class="col-sm-12 mb-2 repo-cols " *ngFor="let repo of _userRepos">
+          <small class="repo-title" appRepoHover>
+            <i class="fa fa-github"></i>{{repo.name}}&nbsp;|
+            <span>
+              <a target="_blank" href="{{repo.html_url}}"><i class="fa fa-clone"></i>{{repo.full_name}}</a>
+            </span>&nbsp;
+          </small>
+          <h6>Last Update:{{repo.updated_at | date}}</h6>
+          <p class="lead">{{repo.description}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- container -->

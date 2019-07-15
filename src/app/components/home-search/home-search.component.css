@@ -1,0 +1,70 @@
+.card-header,
+.card-footer,
+.card-body,
+.list-group {
+  background: rgb(0, 0, 0, .9) !important;
+  color: #fff;
+}
+
+.list-group-item {
+  background: rgb(0, 0, 0, .7);
+  letter-spacing: .1rem;
+}
+
+
+
+
+.card-footer {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  color: #333;
+}
+
+img.card-img-top {
+  max-width: 150px;
+  max-height: 150px
+}
+
+.card-footer span {
+  margin: 0 4px;
+  padding: 5px 3px;
+}
+
+i.fa.fa-map-marker,
+i.fa.fa-building-o {
+  color: #1ebba3;
+  padding-right: 3px;
+}
+
+i.fa.fa-github,
+i.fa.fa-clone {
+  padding-right: 4px;
+  color: #1ebba3;
+}
+
+i.fa.fa-clone {
+  color: #fb3;
+}
+
+.badge-info,
+.badge-primary,
+.badge-danger,
+.badge-warning {
+  background: #1ebba3;
+
+}
+
+small.repo-title {
+  margin-top: 1.4rem;
+  color: #1ebba3;
+  font-size: 1.2rem;
+}
+
+.repo-title span a {
+  color: rgb(69, 245, 227);
+
+}
+
+.repo-cols p {
+  color: #fff;
+}
