@@ -1,4 +1,4 @@
-#GIT HUB GET MY PROFILE
+# GIT HUB GET MY PROFILE
 
 ### By Juliet Wambua
 
